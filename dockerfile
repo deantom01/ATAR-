@@ -15,4 +15,6 @@ COPY --from=BUILDER /app/build /app/build
 
 RUN npm install -g serve
 
+EXPOSE 3000
+
 CMD ["npx", "serve", "-s", "/app/build"]
